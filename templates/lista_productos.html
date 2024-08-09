@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+        {% for producto_id, producto in productos.items() %}
+        <li>
+            <h2><a href="{{ url_for('detalle_producto', producto_id=producto_id) }}">{{ producto.nombre }}</a></h2>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
